@@ -32,6 +32,44 @@
 				margin-left: 10px;
 				margin-bottom: 10px;
 			}
+			.carousel {
+				position: relative;
+				width: 100%;
+				max-width: 600px;
+				margin: auto;
+				overflow: hidden;
+			}
+
+			.carousel-images {
+				display: flex;
+				transition: transform 0.5s ease;
+			}
+
+			.carousel-images img {
+				width: 100%;
+				display: none;
+			}
+
+			.carousel-images img.active {
+				display: block;
+			}
+
+			.carousel-controls {
+				position: absolute;
+				top: 50%;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				transform: translateY(-50%);
+			}
+
+			.carousel-controls button {
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				border: none;
+				padding: 10px;
+				cursor: pointer;
+			}
 			details > summary {
 				list-style: none;
 			}
@@ -55,8 +93,6 @@
 	</head>
 	<body class="is-preload">
 
-
-
 		<!-- Wrapper-->
 			<div id="wrapper">
 
@@ -65,10 +101,10 @@
 						<a href="#" class="icon solid fa-home"><span>Home</span></a>
 						<a href="#about" class="fa solid fa-user-o"><span>About me</span></a>
 						<a href="#interests" class="icon solid fa-heart"><span>Interests</span></a>
-						<a href="#skills" class="icon solid fa-desktop"><span>Skills</span></a>
+						<a href="#skills" class="icon solid fa-tools"><span>Skills</span></a>
 						<a href="#phd" class="icon solid fa-folder"><span>PhD Project</span></a>
 						<a href="#presentations" class="fa fa-file-powerpoint-o"><span>Presentations</span></a>	
-						<a href="#projects" class="icon solid fa-lightbulb"><span>Projects</span></a>	
+						<a href="#projects" class="icon solid fa-project-diagram"><span>Projects</span></a>	
 						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
 					</nav>
 
@@ -121,6 +157,17 @@
 							<article id="interests" class="panel">
 								<header>
 									<h2>Interests</h2>
+									<div class="carousel">
+										<div class="carousel-images">
+											<img src="images/lhcb_controlroom.jpg" alt="LHCb Interview Image" class="active">
+											<img src="images/hackathon1.jpeg" alt="Hackathon">
+											<img src="images/sprint1.png" alt="Sprint">
+										</div>
+										<div class="carousel-controls">
+											<button class="prev">Previous</button>
+											<button class="next">Next</button>
+										</div>
+									</div>
 								</header>
 								<p>
 									<ul>
@@ -434,6 +481,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="js/carousel.js"></script>
 	</body>
 </html>
