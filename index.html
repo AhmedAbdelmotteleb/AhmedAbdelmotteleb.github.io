@@ -10,6 +10,22 @@
 		<script src="https://kit.fontawesome.com/5cd8a6f51f.js" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<style>
+			.custom-icon {
+				width: 1.2em;  
+				height: 1.2em;
+				fill: gray; 
+				margin-right: 10px; 
+			}
+			.corner-image {
+				float: right;
+				width: 240px; /* Adjust this value */
+				height: 301px; /* Adjust this value */
+				margin-left: 20px;
+				margin-bottom: 20px;
+				border: 2px solid black; /* Add this line */
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -51,6 +67,7 @@
 							<article id="about" class="panel">
 								<header>
 									<h2>About me</h2>
+									<img class="corner-image" src="images/LHCb_Interview.PNG" alt="LHCb Interview Image">
 								</header>
 								<ul>
 									<li>
@@ -59,9 +76,10 @@
 									<li>
 										<a href="https://drive.google.com/file/d/1ROCpfOt4qkMpUkw0sItzIwn4iNMW3nm9/view?usp=sharing" download target="_blank"> Longer CV (as of 06/06/2024)</a>
 									</li>
-									<br>
-									<a href="https://www.instagram.com/p/CdxT89uFVLk/" target="_blank">My interview on the official LHCb Instagram page</a> 
-									<li>From Cairo, Egypt.</li>
+									<li>
+										<a href="https://www.instagram.com/p/CdxT89uFVLk/" target="_blank">My interview on the official LHCb Instagram page</a> 
+									</li>
+										<li>From Cairo, Egypt.</li>
 									<li>Current Particle Physics PhD candidate at the University of Warwick (LHCb Experiment - CERN) (Oct 2020 - Oct 2024).</li>
 									<li>Graduated with an MPhys Physics from the University of Manchester (2016-2020).</li>
 									<li>MPhys Project was with ATLAS (CERN). Tried to prove Majorana Neutrinos exist using Left-Right Symmetric Models (SM Extension/BSM) and simulations.</li>
@@ -99,60 +117,37 @@
 									<h2>Skills</h2>
 								</header>
 								<div>
-									<h3>Programming Languages <span style="font-size: 0.5em;">(click arrow to expand)</span></h3>
+									<h3>Computing <span style="font-size: 0.5em;">(click arrow to expand)</span></h3>
 
 									<!-- Python -->
 									<div>
 										<details>
 											<summary>Python <i class="fab fa-python"></i></summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 90%;">Advanced (90%)</div>
-											</div>
-											<p>Used in data analysis projects with Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Keras.</p>
+											<p>Data analysis projects with Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Keras.</p>
 										</details>
 									</div>
 
 									<!-- C++ -->
 									<div>
 										<details>
-											<summary>C++</summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 50%;">Intermediate (50%)</div>
-											</div>
-											<p>Experience with OOP, Boost, BoostPython binding, metaprogramming.</p>
+											<summary>C++ <img class="custom-icon" src="assets/svg_icons/cplusplus.svg" alt="C++ Icon"></summary>
+											<p>Experience with OOP, Boost, BoostPython binding, metaprogramming, Lazy evaluation, Parallel executing, and STL.</p>
 										</details>
 									</div>
 									
 									<!-- ROOT -->
 									<div>
 										<details>
-											<summary>ROOT</summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 50%;">Intermediate (50%)</div>
-											</div>
-											<p>Used CERN software for data analysis.</p>
-										</details>
-									</div>
-									
-									<!-- LHCb software and grid -->
-									<div>
-										<details>
-											<summary>LHCb software and grid</summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 70%;">Intermediate (70%)</div>
-											</div>
-											<p>Used for data analysis in high energy physics.</p>
+											<summary>ROOT <img class="custom-icon" src="assets/svg_icons/root.svg" alt="ROOT Icon"></summary>
+											<p>Data analysis in the context of High Energy Physics</p>
 										</details>
 									</div>
 									
 									<!-- CUDA -->
 									<div>
 										<details>
-											<summary>CUDA</summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 70%;">Intermediate (70%)</div>
-											</div>
-											<p>Used for parallel computing on Nvidia graphics processing units (GPUs).</p>
+											<summary>CUDA <img class="custom-icon" src="assets/svg_icons/cuda.svg" alt="CUDA Icon"></summary>
+											<p>Parallel computing on NVIDIA graphics processing units (GPUs).</p>
 										</details>
 									</div>
 									
@@ -160,20 +155,14 @@
 									<div>
 										<details>
 											<summary>Bash <i class="fas fa-terminal"></i></summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 70%;">Intermediate (70%)</div>
-											</div>
-											<p>Experience with shell scripting.</p>
+											<p>Shell scripting and system administration.</p>
 										</details>
 									</div>
 									
 									<!-- Linux -->
 									<div>
 										<details>
-											<summary>Linux (Ubuntu, CentOS, RHEL) <i  <i class="fab fa-linux"></i></summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 80%;">Advanced (80%)</div>
-											</div>
+											<summary>Linux (Ubuntu, CentOS, RHEL) <i class="fab fa-linux"></i> <i class="fab fa-ubuntu"></i> <i class="fab fa-centos"></i> <i class="fab fa-redhat"></i></summary>
 											<p>Experience with various Linux distributions and system administration.</p>
 										</details>
 									</div>
@@ -182,21 +171,15 @@
 									<div>
 										<details>
 											<summary>SQL <i class="fas fa-database"></i></summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 70%;">Intermediate (70%)</div>
-											</div>
-											<p>Experience with MySQL.</p>
+											<p>Experience with relational databases and SQL queries.</p>
 										</details>
 									</div>
 
 									<!-- LaTeX -->
 									<div>
 										<details>
-											<summary>LaTeX (for writing scientific papers)<i class="fas fa-file-alt"></i></summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 90%;">Advanced (90%)</div>
-											</div>
-											<p>Experience with writing scientific papers using LaTeX.</p>
+											<summary>LaTeX (for writing scientific papers) <img class="custom-icon" src="assets/svg_icons/latex.svg" alt="LaTeX Icon"></summary>
+											<p>Experience with writing scientific papers and creating presentations using LaTeX.</p>
 										</details>
 									</div>
 									
@@ -204,54 +187,47 @@
 									<div>
 										<details>
 											<summary>HTML, CSS, JavaScript <i class="fab fa-html5"></i> <i class="fab fa-css3"></i> <i class="fab fa-js-square"></i></summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 70%;">Intermediate (70%)</div>
-											</div>
-											<p>Used for web development.</p>
+											<p>Web development and creating interactive websites.</p>
 										</details>
 									</div>
 									
 									<!-- Julia, R, MATLAB, Mathematica -->
 									<div>
 										<details>
-											<summary>Julia, R, MATLAB, Mathematica <i class="fas fa-chart-line"></i></summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 70%;">Intermediate (70%)</div>
-											</div>
-											<p>Used for data analysis.</p>
+											<summary>Julia, R, MATLAB, Mathematica <img class="custom-icon" src="assets/svg_icons/julia.svg" alt="Julia Icon"><i class="fab fa-r-project"></i> <img class="custom-icon" src="assets/svg_icons/matlab.svg" alt="MATLAB Icon"><img class="custom-icon" src="assets/svg_icons/wolfram.svg" alt="Wolfram Icon"> </summary>
+											<p>Data analysis and statistical computing.</p>
 										</details>
 									</div>
 									
 									<!-- Rust -->
 									<div>
 										<details>
-											<summary>Rust</summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 60%;">Intermediate (60%)</div>
-											</div>
-											<p>Used for systems programming, memory-safe concurrency.</p>
+											<summary>Rust <img class="custom-icon" src="assets/svg_icons/rust.svg" alt="Rust Icon"></summary>
+											<p>Systems programming, memory-safe concurrency, replacing C/C++.</p>
 										</details>
 									</div>
 									
 									<!-- Qiskit, Pennylane and Cirq -->
 									<div>
 										<details>
-											<summary>Qiskit, Pennylane and Cirq</summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 60%;">Intermediate (60%)</div>
-											</div>
-											<p>Used for Quantum Computing and Quantum Machine Learning.</p>
+											<summary>Qiskit, Pennylane and Cirq <img class="custom-icon" src="assets/svg_icons/quantum.svg" alt="Quantum Icon"></summary>
+											<p>Quantum Computing and Quantum Machine Learning.</p>
 										</details>
 									</div>
 									
 									<!-- Git -->
 									<div>
 										<details>
-											<summary>Git <i class="fab fa-git"></i></summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 80%;">Advanced (80%)</div>
-											</div>
-											<p>Used for version control.</p>
+											<summary>Git, Github, Gitlab <i class="fab fa-git"></i> <i class="fab fa-github"> <img class="custom-icon" src="assets/svg_icons/gitlab.svg" alt="Gitlab Icon"></i></summary>
+											<p>Version control and collaboration on software projects.</p>
+										</details>
+									</div>
+
+									<!-- Docker -->
+									<div>
+										<details>
+											<summary>Docker <i class="fab fa-docker"></i></summary>
+											<p>Containerization and deployment of applications.</p>
 										</details>
 									</div>
 									
@@ -259,10 +235,15 @@
 									<div>
 										<details>
 											<summary>Microsoft <i class="fab fa-microsoft"></i></summary>
-											<div class="progress">
-												<div class="progress-bar" style="width: 80%;">Advanced (80%)</div>
-											</div>
-											<p>Experience with Microsoft tools and technologies.</p>
+											<p>Experience with Microsoft tools and technologies (Azure DevOps, PowerBI, WSL, Word, Excel, PowerPoint, Teams).</p>
+										</details>
+									</div>
+
+									<!-- Google -->
+									<div>
+										<details>
+											<summary>Google <i class="fab fa-google"></i></summary>
+											<p>Experience with Google tools and technologies (Google Cloud, Kubernetes, Colab, Drive).</p>
 										</details>
 									</div>
 									
