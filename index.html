@@ -19,11 +19,37 @@
 			}
 			.corner-image {
 				float: right;
-				width: 240px; /* Adjust this value */
-				height: 301px; /* Adjust this value */
+				width: 240px; 
+				height: 301px; 
 				margin-left: 20px;
 				margin-bottom: 20px;
-				border: 2px solid black; /* Add this line */
+				border: 2px solid black; 
+			}
+			.corner-image2 {
+				float: right;
+				width: 270px; 
+				height: 270px; 
+				margin-left: 10px;
+				margin-bottom: 10px;
+			}
+			details > summary {
+				list-style: none;
+			}
+
+			details > summary::-webkit-details-marker {
+				display: none;
+			}
+
+			details > summary::before {
+				content: "▶";
+				display: inline-block;
+				margin-right: 6px;
+				transform: rotate(90deg);
+				transition: transform 0.3s ease-in-out;
+			}
+
+			details[open] > summary::before {
+				transform: rotate(0deg);
 			}
 		</style>
 	</head>
@@ -257,6 +283,7 @@
 							<article id="phd" class="panel">
 								<header>
 									<h2>PhD Project </h2>
+									<img class="corner-image2" src="images/W_boson.png" alt="W Boosn Particle Zoo Image">
 								</header>
 								<p>
 									<a href="https://gitlab.cern.ch/LHCb-QEE/ew-analyses/-/wikis/W-studies-with-5-TeV-data" target="_blank">Wiki and Presentations (need CERN account)</a>
@@ -271,35 +298,36 @@
 									<br><br>
 
 
-									<b> FAQ </b>
-									<ol class="decimal">
-										 <li>Why do we care about mW? 
-										 <ul class="square">
-										  <li>W boson is one of the key probes for new physics effects slightly deviating from the Standard Model.</li>
-										  <li>The “Global electroweak fit” is sensitive to BSM physics, and the precision of the W boson mass is the bottleneck.</li>
-										  <li> It allows us to probe further into the precision of massmeasurements of the Higgs boson and the top quark.</li>
-										  <li>At the precision that we are measuring mW, we are probing quantum loop corrections, including, possibly, loops from BSM.</li>
-										 </ul>
-										 </li>
+									<h4> FAQ </h4>
+									<details>
+										<summary><b>1. Why do we care about mW?</b></summary>
+										<ul class="square">
+											<li>W boson is one of the key probes for new physics effects slightly deviating from the Standard Model.</li>
+											<li>The “Global electroweak fit” is sensitive to BSM physics, and the precision of the W boson mass is the bottleneck.</li>
+											<li> It allows us to probe further into the precision of mass measurements of the Higgs boson and the top quark.</li>
+											<li>At the precision that we are measuring mW, we are probing quantum loop corrections, including, possibly, loops from BSM.</li>
+										</ul>
+									</details>
 
-										 <li>What is unique about this study? 
-										 <ul class="square">
-										  <li>We aim to contribute to a highly precise measurement of mW.</li>
-										  <li>We are experimenting with background subtraction as a new method for determining mW.</li>
-										  <li>We are aiming for the first unfolded measurement of the muon 𝑝𝑇. </li>
-										  <li>We are using the LHCb detector as a General Purpose Detector.</li>
-										  <li>Our measurement can be a significant contribution towards an LHC-wide average.</li>
-										 </ul>
-										 </li>
+									<details>
+										<summary><b>2. What is unique about this study?</b></summary>
+										<ul class="square">
+											<li>We aim to contribute to a highly precise measurement of mW.</li>
+											<li>We are experimenting with background subtraction as a new method for determining mW.</li>
+											<li>We are aiming for the first unfolded measurement of the muon 𝑝𝑇.</li>
+											<li>We are using the LHCb detector as a General Purpose Detector.</li>
+											<li>Our measurement can be a significant contribution towards an LHC-wide average.</li>
+										</ul>
+									</details>
 
-										  <li>How would your results compare to previous experiments? 
-										 <ul class="square">
-										  <li>We would measure the cross section as a function of [pT ,η] rather than just η.</li>
-										  <li>By utilising the `\sqrt(s)=5` TeV dataset at LHCb obtained in 2017, our objective is to establish a proof-of-principle measurement that showcases the potential of the background subtraction method and unfolding techniques. This initial demonstration will pave the way for a seamless transition to utilizing the comprehensive Run-II dataset at `\sqrt(s)=13` TeV, enabling us to achieve significantly enhanced precision and reduced uncertainties</li>
-										  <li> Our unfolded measurement (first of its kind) will allow theorists to use their models and try to fit mW without worrying about constraints from detector uncertainties.</li>
-										 </ul>
-										 </li>
-									</ol>
+									<details>
+										<summary><b>3. How would your results compare to previous experiments?</b></summary>
+										<ul class="square">
+											<li>We would measure the cross section as a function of [pT ,η] rather than just η.</li>
+											<li>By utilising the `\sqrt(s)=5` TeV dataset at LHCb obtained in 2017, our objective is to establish a proof-of-principle measurement that showcases the potential of the background subtraction method and unfolding techniques. This initial demonstration will pave the way for a seamless transition to utilizing the comprehensive Run-II dataset at `\sqrt(s)=13` TeV, enabling us to achieve significantly enhanced precision and reduced uncertainties</li>
+											<li> Our unfolded measurement (first of its kind) will allow theorists to use their models and try to fit mW without worrying about constraints from detector uncertainties.</li>
+										</ul>
+									</details>
 
 								</p>
 							</article>
