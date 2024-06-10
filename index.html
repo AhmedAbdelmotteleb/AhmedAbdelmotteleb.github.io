@@ -106,6 +106,38 @@
 				font-size: 1.5em;
 			}
 
+			.presentation {
+				margin-bottom: 20px;
+			}
+			
+			.presentation-title {
+				font-size: 20px;
+			}
+			
+			.presentation-location {
+				font-size: 18px;
+				color: #666;
+			}
+			
+			.presentation-date {
+				font-size: 16px;
+				color: #999;
+			}
+			
+			.presentation-links {
+				display: flex;
+				gap: 10px;
+			}
+			
+			.presentation-link {
+				display: inline-block;
+				padding: 10px;
+				background-color: #f0f0f0;
+				border: 1px solid #ccc;
+				text-decoration: none;
+				color: #333;
+			}
+
 			details > summary {
 				list-style: none;
 			}
@@ -429,46 +461,40 @@
 					        <h2>Public Presentations and Lectures</h2>
 							<img class="corner-image3" src="images/presentation.PNG" alt="Presentation">
 					    </header>
-					    <div class="span-1-5">
-					        <ul>
-					            <li>
-					                <a href="https://indico.cern.ch/event/1208723/contributions/5230070/" target="_blank">
-					                    <span class="presentation-title">Inverted CERN School of Computing (iCSC) Lecture 1 on Quantum Computing (presentation file)</span>
-					                    <span class="presentation-date">[8 March 2023]</span>
-					                </a>
-					            </li>
-					            <li>
-					                <a href="https://cds.cern.ch/record/2852078?ln=en" target="_blank">
-					                    <span class="presentation-title">Inverted CERN School of Computing (iCSC) Lecture 1 on Quantum Computing (recording)</span>
-					                    <span class="presentation-date">[8 March 2023]</span>
-					                </a>
-					            </li>
-					            <li>
-					                <a href="https://indico.cern.ch/event/1208723/contributions/5230987/" target="_blank">
-					                    <span class="presentation-title">Inverted CERN School of Computing (iCSC) Lecture 2 on Quantum Computing (presentation file)</span>
-					                    <span class="presentation-date">[8 March 2023]</span>
-					                </a>
-					            </li>
-					            <li>
-					                <a href="https://cds.cern.ch/record/2852080?ln=en" target="_blank">
-					                    <span class="presentation-title">Inverted CERN School of Computing (iCSC) Lecture 2 on Quantum Computing (recording)</span>
-					                    <span class="presentation-date">[8 March 2023]</span>
-					                </a>
-					            </li>
-					            <li>
-					                <a href="https://indico.cern.ch/event/1208723/contributions/5230075/" target="_blank">
-					                    <span class="presentation-title">Inverted CERN School of Computing (iCSC) Quantum Computing Exercise session (challenge problems w/ solutions)</span>
-					                    <span class="presentation-date">[9 March 2023]</span>
-					                </a>
-					            </li>
-					            <li>
-					                <a href="https://videos.cern.ch/record/2791242" target="_blank">
-					                    <span class="presentation-title">LHCb Starterkit 2021 Beginner's Python (recording)</span>
-					                    <span class="presentation-date">[22 November 2021]</span>
-					                </a>
-					            </li>
-					        </ul>
-					    </div>
+						<div class="presentation">
+							<h2 class="presentation-title">Inverted CERN School of Computing (iCSC) Lecture 1 on Quantum Computing</h2>
+							<h3 class="presentation-location">CERN, Switzerland</h3>
+							<h4 class="presentation-date">8 March 2023</h4>
+							<div class="presentation-links">
+								<a href="https://indico.cern.ch/event/1208723/contributions/5230070/" target="_blank" class="presentation-link">Slides</a>
+								<a href="https://cds.cern.ch/record/2852078?ln=en" target="_blank" class="presentation-link">Recording</a>
+							</div>
+						</div>
+						<div class="presentation">
+							<h2 class="presentation-title">Inverted CERN School of Computing (iCSC) Lecture 2 on Quantum Computing</h2>
+							<h3 class="presentation-location">CERN, Switzerland</h3>
+							<h4 class="presentation-date">9 March 2023</h4>
+							<div class="presentation-links">
+								<a href="https://indico.cern.ch/event/1208723/contributions/5230987/" target="_blank" class="presentation-link">Slides</a>
+								<a href="https://cds.cern.ch/record/2852080?ln=en" target="_blank" class="presentation-link">Recording</a>
+							</div>
+						</div>
+						<div class="presentation">
+							<h2 class="presentation-title">Inverted CERN School of Computing (iCSC) Quantum Computing Exercise session</h2>
+							<h3 class="presentation-location">CERN, Switzerland</h3>
+							<h4 class="presentation-date">9 March 2023</h4>
+							<div class="presentation-links">
+								<a href="https://indico.cern.ch/event/1208723/contributions/5230075/" target="_blank" class="presentation-link">Exercises + Solutions</a>
+							</div>
+						</div>
+						<div class="presentation">
+							<h2 class="presentation-title">LHCb Starterkit 2021 Beginner's Python</h2>
+							<h3 class="presentation-location">Online(Zoom)</h3>
+							<h4 class="presentation-date">22 November 2021</h4>
+							<div class="presentation-links">
+								<a href="https://videos.cern.ch/record/2791242" target="_blank" class="presentation-link">Recording</a>
+							</div>
+						</div>
 					</article>
 
 					<!-- Projects -->
