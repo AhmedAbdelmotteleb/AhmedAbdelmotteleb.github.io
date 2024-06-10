@@ -1,41 +1,40 @@
 name: run main.py
 
 on:
-schedule:
-  - cron: '0 12 * * *' # run every day at 12 PM UTC
+  schedule:
+    - cron: '0 12 * * *' # run every day at 12 PM UTC
 
 jobs:
-build:
-  runs-on: ubuntu-latest
-  steps:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content to github runner
 
-    - name: checkout repo content
-      uses: actions/checkout@v2 # checkout the repository content to github runner
-
-    - name: setup python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9' # install the python version needed
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9' # install the python version needed
         
-    - name: install python packages
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install Python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
         
-    - name: execute py script # run main.py
-      env:
-        SOME_SECRET: ${{ secrets.SOME_SECRET }}
-      run: python main.py
+      - name: Execute py script # run main.py
+        env:
+          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+        run: python main.py
         
-    - name: commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A
-        git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m "updated logs"
         
-    - name: push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main 
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
