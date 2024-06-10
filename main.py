@@ -4,6 +4,7 @@ import os
 
 import requests
 from bs4 import BeautifulSoup
+import json
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -21,6 +22,7 @@ try:
     SOME_SECRET = os.environ["SOME_SECRET"]
 except KeyError:
     SOME_SECRET = "Token not available!"
+    
 
 def scrape_lhcb():
     url = "https://lhcb-outreach.web.cern.ch/"
@@ -32,11 +34,21 @@ def scrape_lhcb():
     for i, headline in enumerate(news_div.find_all('a'), 1):
         headline_text = headline.text
         headline_url = headline.get('href')  # extract the URL
-        headlines.append((headline_text, headline_url))  # store as a tuple
+        headlines.append({"title": headline_text, "url": headline_url})  # store as a dictionary
 
-    with open('headlines.txt', 'w') as f:
-        for headline_text, headline_url in headlines:
-            f.write(f"{headline_text}\n{headline_url}\n")  # write both the headline and the URL
+    # Create a new BeautifulSoup object to generate the HTML
+    soup = BeautifulSoup('', 'html.parser')
+    ul = soup.new_tag('ul')
+    for item in headlines:
+        li = soup.new_tag('li')
+        a = soup.new_tag('a', href=item['url'])
+        a.string = item['title']
+        li.append(a)
+        ul.append(li)
+    soup.append(ul)
+
+    with open('headlines.html', 'w') as f:
+        f.write(str(soup))  # write the headlines to the HTML file
 
 if __name__ == "__main__":
     logger.info(f"Token value: {SOME_SECRET}")
