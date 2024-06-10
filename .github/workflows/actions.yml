@@ -32,11 +32,6 @@ jobs:
           git commit -m "Update headlines.html"
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
-    
-      - name: Print working directory and list contents
-        run: |
-          pwd
-          ls
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
