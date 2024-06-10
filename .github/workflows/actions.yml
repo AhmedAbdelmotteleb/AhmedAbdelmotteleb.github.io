@@ -1,12 +1,7 @@
 name: Run main.py
 
 on:
-  workflow_dispatch:
-    inputs:
-      ref:
-        description: 'Branch to run on'
-        required: true
-        default: 'main'
+  workflow_dispatch: # Manually run the workflow
   schedule:
     - cron: '0 0 * * *' # run every day at midnight
 
@@ -28,18 +23,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
         
-      - name: Execute Python script # Run main.py
-        env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python main.py
-        
-      - name: Commit files
+      - name: Execute Python script and commit changes
         run: |
+          python main.py
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add headlines.html
           git diff --quiet || git commit -m "Update headlines.html"
-        
+        env:
+          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+      
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
