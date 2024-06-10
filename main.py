@@ -4,7 +4,6 @@ import os
 
 import requests
 from bs4 import BeautifulSoup
-import json
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
