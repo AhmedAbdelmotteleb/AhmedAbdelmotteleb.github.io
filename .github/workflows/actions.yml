@@ -1,7 +1,7 @@
 name: Run main.py
 
 on:
-  workflow_dispatch: # Manually run the workflow
+  workflow_dispatch: # Run the workflow manually
   schedule:
     - cron: '0 0 * * *' # run every day at midnight
 
@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout repo content
         uses: actions/checkout@v4 # Checkout the repository content to GitHub runner
-    
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -23,16 +23,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
         
-      - name: Execute Python script and commit changes
+      - name: Execute Python script # Run main.py
+        env:
+          SOME_SECRET: ${{ secrets.SOME_SECRET }}
+        run: python main.py
+        
+      - name: Commit files
         run: |
-          python main.py
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add headlines.html
-          git commit --allow-empty -m "Update headlines.html"
-        env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
-
+          git diff --quiet || git commit -m "Update headlines.html"
+        
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
