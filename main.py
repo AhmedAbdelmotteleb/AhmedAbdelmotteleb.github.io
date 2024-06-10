@@ -30,11 +30,13 @@ def scrape_lhcb():
     news_div = soup.find('div', class_='mg-latest-news-slider marquee')
     headlines = []
     for i, headline in enumerate(news_div.find_all('a'), 1):
-        headlines.append(headline.text)
+        headline_text = headline.text
+        headline_url = headline.get('href')  # extract the URL
+        headlines.append((headline_text, headline_url))  # store as a tuple
 
     with open('headlines.txt', 'w') as f:
-        for headline in headlines:
-            f.write("%s\n" % headline)
+        for headline_text, headline_url in headlines:
+            f.write(f"{headline_text}\n{headline_url}\n")  # write both the headline and the URL
 
 if __name__ == "__main__":
     logger.info(f"Token value: {SOME_SECRET}")
