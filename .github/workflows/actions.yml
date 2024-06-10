@@ -1,7 +1,12 @@
 name: Run main.py
 
 on:
-  workflow_dispatch: # Manually trigger the workflow
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Branch to run on'
+        required: true
+        default: 'main'
   schedule:
     - cron: '0 0 * * *' # run every day at midnight
 
