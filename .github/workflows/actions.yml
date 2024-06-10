@@ -1,8 +1,9 @@
 name: Run main.py
 
 on:
+  workflow_dispatch: # Manually trigger the workflow
   schedule:
-    - cron: '10 14 * * *' # run every day at 13:35 UTC
+    - cron: '0 0 * * *' # run every day at midnight
 
 jobs:
   build:
