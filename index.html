@@ -491,8 +491,14 @@
 					                    <span class="project-title">GitHub</span>
 									</a>
 									<p> A collection of fun projects I have worked on during free time. </p>
-									<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@A7medSame7/vsmartprojects?lite=true"></iframe>					            </li>
-								<li>	
+									<iframe id="replitIframe" frameborder="0" width="100%" height="500px"></iframe>
+									
+									<script>
+									window.onload = function() {
+										document.getElementById('replitIframe').src = "https://replit.com/@A7medSame7/vsmartprojects?lite=true";
+									}
+									</script>								
+									<li>	
 					                <a href="https://gitlab.cern.ch/LHCb-QEE/ew-analyses/-/wikis/W-studies-with-5-TeV-data" target="_blank">
 					                    <span class="project-title">Gitlab</span>
 									</a>
