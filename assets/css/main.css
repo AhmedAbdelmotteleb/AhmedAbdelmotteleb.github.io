@@ -1776,6 +1776,7 @@ input, select, textarea {
 	}
 
 		#nav a {
+			font-family: 'Poppins', sans-serif;
 			position: relative;
 			display: inline-block;
 			color: #ffffff;
