@@ -32,7 +32,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add headlines.html
+          git add .
           git diff --quiet || git commit -m "Update headlines.html"
         
       - name: Push changes
