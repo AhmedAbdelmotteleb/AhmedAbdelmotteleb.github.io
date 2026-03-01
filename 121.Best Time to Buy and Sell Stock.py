@@ -24,3 +24,20 @@ Constraints:
 1 <= prices.length <= 100
 0 <= prices[i] <= 100
 """
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        # Solution 1: create a new list every iteration and scan it with min O(n^2) 
+        # max_profit = 0
+        # for i in range(1, len(prices)):
+        #     max_profit = max(max_profit, prices[i] - min(prices[:i]))
+        # return max_profit
+        # Solution 2: Just use min/max and store min_price instead of looping over entire array:
+        max_profit = 0
+        min_buy_price_so_far = prices[0]
+        for i in range(1, len(prices)):
+            max_profit = max(max_profit, prices[i] - min_buy_price_so_far)
+            min_buy_price_so_far = min(min_buy_price_so_far, prices[i])
+        return max_profit
+            
+
+        
