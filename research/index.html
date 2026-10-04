@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Ahmed Abdelmotteleb</title>
+  <meta name="description" content="Ahmed Abdelmotteleb's research at LHCb, CERN: precision W boson mass measurements, heavy-flavour decays, TORCH detector R&D, statistics, machine learning, quantum computing and research software.">
+  <link rel="canonical" href="https://ahmedabdelmotteleb.github.io/research/">
+  <meta name="theme-color" content="#fafaf7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b121c" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ahmed Abdelmotteleb">
+  <meta property="og:title" content="Research · Ahmed Abdelmotteleb">
+  <meta property="og:description" content="Precision W boson physics, statistics, machine learning, quantum computing and research software at LHCb, CERN, explained for experts and non-experts.">
+  <meta property="og:url" content="https://ahmedabdelmotteleb.github.io/research/">
+  <meta property="og:image" content="https://ahmedabdelmotteleb.github.io/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js" defer></script>
+  <script data-goatcounter="https://a7medsame7.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Ahmed Abdelmotteleb, home">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="currentColor"/><path d="M6 24.5c5.5-1 9.3-4.4 11.3-14.6q.9-2.3 1.8 0c1.3 6.8 3 12.6 9.4 15.4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="brand-name">Ahmed Abdelmotteleb</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul>
+          <li><a href="/research/" aria-current="page">Research</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/cv/">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">LHCb experiment · CERN</span>
+        <h1>Research</h1>
+        <p class="lede">I work on <a href="https://lhcb.web.cern.ch/">LHCb</a>, one of the four big experiments at CERN’s Large Hadron Collider. My research sits where precision physics meets statistics, machine learning and software. Each topic starts with a plain-language summary; open <em>More details</em> for the technical side.</p>
+        <ul class="toc" aria-label="Research topics">
+          <li><a href="#w-mass">W boson mass</a></li>
+          <li><a href="#methods">Statistics, ML &amp; quantum</a></li>
+          <li><a href="#heavy-flavour">Heavy-flavour decays</a></li>
+          <li><a href="#torch">TORCH detector</a></li>
+          <li><a href="#software">Software</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 1. W mass -->
+    <section class="section" id="w-mass" aria-labelledby="w-mass-title">
+      <div class="wrap theme">
+        <div>
+          <span class="eyebrow">01 · Electroweak</span>
+          <h2 id="w-mass-title">Weighing the W boson</h2>
+          <p class="in-short">The W boson carries the weak nuclear force. The Standard Model predicts its mass very precisely, so measuring it precisely is one of the sharpest tests of the theory: a mismatch would point to particles or forces we have not yet discovered.</p>
+          <p>When a W boson decays to a muon and an (invisible) neutrino, the muon’s momentum transverse to the beam piles up just below half the W mass, then falls off sharply. The position and sharpness of that edge, the <em>Jacobian peak</em>, encode the W mass. Measure the spectrum precisely, and you have measured the mass.</p>
+          <p>LHCb sees W bosons produced at small angles to the beam, a region the other LHC experiments do not cover. That makes its measurement complementary to theirs and helps reduce the uncertainties of an LHC-wide combination.</p>
+
+          <span class="label">My role</span>
+          <ul class="role-list">
+            <li><strong>PhD (2020–24):</strong> led the first LHCb measurement of the W&nbsp;→&nbsp;μν cross-section as a function of the muon’s transverse momentum, using 2017 data at √s&nbsp;=&nbsp;5.02&nbsp;TeV.</li>
+            <li>Developed a <strong>two-step approach</strong> to the W mass: first publish a detector-corrected spectrum, then extract m<sub>W</sub> from it. The spectrum stays reusable for new theory and for combinations, and other experiments are now adopting the approach.</li>
+            <li><strong>Now:</strong> lead analyst for the measurement using the full Run&nbsp;2 dataset at √s&nbsp;=&nbsp;13&nbsp;TeV, extended to a double-differential measurement in transverse momentum and pseudorapidity, with improved momentum-scale and lepton-isolation calibrations.</li>
+          </ul>
+
+          <details class="expert">
+            <summary>More details</summary>
+            <div>
+              <dl class="faq">
+                <dt>Why does m<sub>W</sub> matter now?</dt>
+                <dd>In the global electroweak fit, the precision on m<sub>W</sub> is the limiting factor. At the current level of precision, measurements probe quantum loop corrections, including possible contributions from physics beyond the Standard Model. The spread among recent measurements makes new, independent ones particularly valuable.</dd>
+                <dt>What is different about this approach?</dt>
+                <dd>Instead of fitting m<sub>W</sub> directly to reconstructed-level templates, we unfold the muon p<sub>T</sub> spectrum to a detector-corrected cross-section in bins of (p<sub>T</sub>, η), not η alone. Theorists can then fit m<sub>W</sub> with their own predictions without having to model the detector, and the result can be reinterpreted and combined later.</dd>
+                <dt>Why start at 5.02&nbsp;TeV?</dt>
+                <dd>The 2017 low-pile-up run at √s&nbsp;=&nbsp;5.02&nbsp;TeV was the proof of principle for background subtraction and unfolding in this channel. The Run&nbsp;2 13&nbsp;TeV dataset brings far more W bosons and with them the precision needed for a competitive m<sub>W</sub>.</dd>
+                <dt>Related calibration work</dt>
+                <dd>Momentum-scale biases are among the dominant systematics. I contributed to LHCb’s pseudomass method for curvature-bias corrections (JINST 2024).</dd>
+              </dl>
+            </div>
+          </details>
+
+          <ul class="links" aria-label="W mass resources">
+            <li><a href="https://doi.org/10.1007/JHEP03(2026)148">JHEP 2026 paper <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://repository.cern/records/rfe6z-pfa95">PhD thesis <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://indico.cern.ch/event/1291157/contributions/5878655/">ICHEP 2024 talk <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://doi.org/10.1007/JHEP01(2022)036"><span>LHCb’s first m<sub>W</sub> measurement (2022)</span> <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://doi.org/10.1088/1748-0221/19/03/P03010">Curvature-bias corrections <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+          </ul>
+        </div>
+
+        <div class="theme-aside">
+          <figure class="figure">
+            <div class="frame">
+              <svg class="plot" viewBox="-60 -30 740 410" role="img" aria-labelledby="w-plot-title">
+                <title id="w-plot-title">Sketch of the muon transverse-momentum spectrum in W boson decays: it rises to a sharp peak just below half the W mass, then falls steeply</title>
+                <g class="gridline"><path d="M0 312V20M106.7 312V20M213.3 312V20M320 312V20M426.7 312V20M533.3 312V20M640 312V20"/></g>
+                <polygon class="fill" points="0,179 13.3,176 26.7,172.9 40,169.6 53.3,166.1 66.7,162.5 80,158.7 93.3,154.6 106.7,150.2 120,145.4 133.3,140.3 146.7,134.6 160,128.2 173.3,121 186.7,112.8 200,103 213.3,91.3 226.7,78.1 240,63.3 253.3,48.3 266.7,35.5 280,28.2 286.7,28 293.3,30.6 306.7,45.2 320,72.3 333.3,109 346.7,150.1 360,190.1 373.3,224.5 386.7,251.2 400,270.1 413.3,282.6 426.7,290.5 440,295.3 453.3,298.2 480,301.4 520,303.9 560,305.3 600,306.2 640,306.8 640,312 0,312"/>
+                <polyline class="hist" points="0,172.9 53.3,172.9 53.3,158.7 106.7,158.7 106.7,140.3 160,140.3 160,112.8 213.3,112.8 213.3,63.3 266.7,63.3 266.7,30.6 320,30.6 320,150.1 373.3,150.1 373.3,270.1 426.7,270.1 426.7,298.2 480,298.2 480,303.3 533.3,303.3 533.3,305.3 586.7,305.3 586.7,306.4 640,306.4"/>
+                <polyline class="model" points="0,179 13.3,176 26.7,172.9 40,169.6 53.3,166.1 66.7,162.5 80,158.7 93.3,154.6 106.7,150.2 120,145.4 133.3,140.3 146.7,134.6 160,128.2 173.3,121 186.7,112.8 200,103 213.3,91.3 226.7,78.1 240,63.3 253.3,48.3 266.7,35.5 280,28.2 286.7,28 293.3,30.6 306.7,45.2 320,72.3 333.3,109 346.7,150.1 360,190.1 373.3,224.5 386.7,251.2 400,270.1 413.3,282.6 426.7,290.5 440,295.3 453.3,298.2 480,301.4 520,303.9 560,305.3 600,306.2 640,306.8"/>
+                <line class="peak" x1="324.8" y1="312" x2="324.8" y2="0"/>
+                <text class="label-peak" x="336" y="20">m<tspan dy="6" font-size="18">W</tspan><tspan dy="-6">/2</tspan></text>
+                <g class="err"><path d="M26.7 162.3v25M80 141.9v25.6M133.3 128.9v26.4M186.7 101.7v27.4M240 56.8v29.4M293.3 17.2v30.6M346.7 128.5v26M400 256.8v21.2M453.3 282v20M506.7 291.9v19.8M560 293v19.8M613.3 295.5v19.6"/></g>
+                <g class="pt"><circle cx="26.7" cy="174.8" r="5"/><circle cx="80" cy="154.7" r="5"/><circle cx="133.3" cy="142.1" r="5"/><circle cx="186.7" cy="115.4" r="5"/><circle cx="240" cy="71.5" r="5"/><circle cx="293.3" cy="32.5" r="5"/><circle cx="346.7" cy="141.5" r="5"/><circle cx="400" cy="267.4" r="5"/><circle cx="453.3" cy="292" r="5"/><circle cx="506.7" cy="301.8" r="5"/><circle cx="560" cy="302.9" r="5"/><circle cx="613.3" cy="305.3" r="5"/></g>
+                <path class="axis" d="M0 0v312h640"/>
+                <text x="0" y="344" text-anchor="middle">28</text><text x="213.3" y="344" text-anchor="middle">36</text><text x="426.7" y="344" text-anchor="middle">44</text><text x="640" y="344" text-anchor="end">52</text>
+                <text x="560" y="374" text-anchor="end">p<tspan dy="6" font-size="17">T</tspan><tspan dy="-6">(μ) [GeV]</tspan></text>
+                <text x="-30" y="150" text-anchor="middle" transform="rotate(-90 -30 150)">events</text>
+              </svg>
+            </div>
+            <figcaption>The shape that carries the W mass: muons pile up just below m<sub>W</sub>/2 (dashed line) and fall off sharply above it. Points with error bars stand in for data; the curve is the prediction. Illustrative sketch, not LHCb data.</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="/assets/img/controlroom-wide.webp" width="960" height="889" loading="lazy" decoding="async" alt="Ahmed in the LHCb control room in front of LHC status screens">
+            <figcaption>In the LHCb control room during the 6.8&nbsp;TeV beam ramp, July 2022.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Methods -->
+    <section class="section" id="methods" aria-labelledby="methods-title">
+      <div class="wrap theme">
+        <div>
+          <span class="eyebrow">02 · Methods</span>
+          <h2 id="methods-title">Statistics, machine learning &amp; quantum computing</h2>
+          <p class="in-short">A measurement is only as good as its statistics. I develop methods that extract more information from the data and make results more trustworthy, and I help bring new techniques, from machine learning to quantum computing, into a large collaboration.</p>
+
+          <span class="label">My role</span>
+          <ul class="role-list">
+            <li>Co-developed a <strong>new maximum-likelihood method for template fits</strong> that correctly accounts for limited simulation statistics. It is implemented in the widely used <a href="https://scikit-hep.org/iminuit/reference.html#iminuit.cost.Template">iminuit</a> fitting package.</li>
+            <li><strong>Coordinator of Innovative Analysis Techniques</strong> (LHCb DPA WP4) since 2025: I run a monthly forum where internal and external experts introduce new machine-learning, quantum-computing and statistical methods, and I review high-profile papers in this area.</li>
+            <li>Supervise <a href="https://warwick.ac.uk/services/skills/urss/">Warwick URSS</a> summer projects on <strong>conditional normalising flows</strong> for muon reconstruction and detector calibration, and on quantum algorithms for classification and tracking.</li>
+            <li>Initiated the <strong>LHCb–CERN Quantum Technology Initiative</strong> collaboration, which gives LHCb access to IBM Quantum hardware. I organised the <a href="https://indico.cern.ch/event/1519367/overview">first LHCb Quantum Computing Workshop</a> at Warwick and co-organised the <a href="https://indico.cern.ch/event/1591956/">LHC Quantum Computing workshop</a>.</li>
+            <li>Second place at the <strong>UK Quantum Hackathon 2023</strong> for a quantum Monte Carlo particle-transport simulation for nuclear shielding.</li>
+          </ul>
+
+          <details class="expert">
+            <summary>More details</summary>
+            <div>
+              <p><strong>Template fits.</strong> Fitting binned templates from Monte Carlo to data should propagate the templates’ own statistical uncertainty. Barlow and Beeston’s exact likelihood does this but is hard to solve and does not handle weighted samples. Our approximate likelihood (Dembinski &amp; Abdelmotteleb, EPJC 2022) generalises to weighted templates and weighted data, with small bias and good coverage, and evaluates faster when there are many bins. Use it through <code>iminuit.cost.Template</code>.</p>
+              <p><strong>Machine learning.</strong> Classifiers for event selection, conditional normalising flows for reconstruction and calibration, and simulation-based inference, built with PyTorch, TensorFlow, scikit-learn and XGBoost.</p>
+              <p><strong>Reviews.</strong> Within WP4 I reviewed papers on particle isolation for Run&nbsp;3 and on a quantum-computing approach to track reconstruction, the latter submitted to <em>Nature</em>.</p>
+            </div>
+          </details>
+
+          <ul class="links" aria-label="Methods resources">
+            <li><a href="https://doi.org/10.1140/epjc/s10052-022-11019-z">Template-fit paper (EPJC) <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://lhcb-dpa.web.cern.ch/lhcb-dpa/wp4/index.html">LHCb DPA WP4 <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://www.nqcc.ac.uk/wp-content/uploads/2023/08/NQCC_Hackathon_article_July2023.pdf">Hackathon write-up (NQCC) <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+          </ul>
+          <span class="label links-label">Quantum computing lectures</span>
+          <ul class="links" aria-label="Quantum computing lectures">
+            <li><a href="https://indico.cern.ch/event/1591956/contributions/6708827/">2026 · Lecture 1 slides <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://indico.cern.ch/event/1591956/contributions/6708826/">2026 · Lecture 2 slides <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://indico.cern.ch/event/1208723/contributions/5230070/">2023 · Lecture 1 slides <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://cds.cern.ch/record/2852078"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-play"/></svg> 2023 · Lecture 1 recording</a></li>
+            <li><a href="https://indico.cern.ch/event/1208723/contributions/5230987/">2023 · Lecture 2 slides <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://cds.cern.ch/record/2852080"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-play"/></svg> 2023 · Lecture 2 recording</a></li>
+          </ul>
+        </div>
+
+        <div class="theme-aside">
+          <figure class="figure">
+            <img src="/assets/img/g-hackathon-podium.webp" width="1112" height="640" loading="lazy" decoding="async" alt="The second-placed team with medals at the UK Quantum Hackathon 2023">
+            <figcaption>Second place at the UK Quantum Hackathon 2023 (National Quantum Computing Centre).</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="/assets/img/g-cern-lecture.webp" width="624" height="600" loading="lazy" decoding="async" alt="Ahmed lecturing on quantum computing at CERN">
+            <figcaption>Teaching quantum computing at the Inverted CERN School of Computing, 2023.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Heavy flavour -->
+    <section class="section" id="heavy-flavour" aria-labelledby="hf-title">
+      <div class="wrap theme">
+        <div>
+          <span class="eyebrow">03 · Heavy flavour</span>
+          <h2 id="hf-title">A heavy quark decaying next to a heavier one</h2>
+          <p class="in-short">The B<sub>c</sub> meson is the only known particle made of two different heavy quarks, a beauty and a charm. In the decays I study, the charm quark decays while the beauty quark survives, a rare window onto how heavy quarks behave when bound together.</p>
+          <p>Part of the final state, a low-energy photon, is too soft to detect. I use <em>partial reconstruction</em>: recovering the missing piece from the shape it leaves in the data that we do see.</p>
+
+          <span class="label">My role</span>
+          <ul class="role-list">
+            <li><strong>Lead analyst</strong> for the B<sub>c</sub><sup>±</sup>&nbsp;→&nbsp;B<sub>s</sub><sup>(∗)0</sup>π<sup>±</sup> analysis using LHCb Run&nbsp;1 and Run&nbsp;2 data.</li>
+            <li>Built the <strong>machine-learning event selection</strong> and the mass fit in <a href="https://zfit.readthedocs.io/en/stable/">zfit</a>, a TensorFlow-based fitting library.</li>
+          </ul>
+
+          <details class="expert">
+            <summary>More details</summary>
+            <div>
+              <p>Both B<sub>c</sub><sup>±</sup>&nbsp;→&nbsp;B<sub>s</sub><sup>0</sup>π<sup>±</sup> and B<sub>c</sub><sup>±</sup>&nbsp;→&nbsp;B<sub>s</sub><sup>∗0</sup>π<sup>±</sup> proceed through the c&nbsp;→&nbsp;s transition with the b quark as a spectator. In the B<sub>s</sub><sup>∗0</sup> mode the B<sub>s</sub><sup>∗0</sup>&nbsp;→&nbsp;B<sub>s</sub><sup>0</sup>γ photon is not reconstructed, so the signal appears as a partially reconstructed structure below the fully reconstructed peak. Both components are fitted simultaneously.</p>
+            </div>
+          </details>
+        </div>
+        <div class="theme-aside">
+          <figure class="figure">
+            <div class="frame">
+              <svg class="decay" viewBox="0 0 320 130" role="img" aria-labelledby="hf-diagram-title">
+                <title id="hf-diagram-title">Decay chain: B c meson decays to a B s meson and a pion; the B s star decays to B s and an undetected photon</title>
+                <g style="font-family: var(--font-mono)" font-size="15" fill="currentColor">
+                  <text x="10" y="80">B<tspan dy="5" font-size="11">c</tspan><tspan dy="-12" font-size="11">±</tspan></text>
+                  <path d="M42 75h50" stroke="currentColor" stroke-width="1.5" marker-end="url(#ah)"/>
+                  <text x="100" y="58">B<tspan dy="5" font-size="11">s</tspan><tspan dy="-12" font-size="11">(∗)0</tspan></text>
+                  <text x="100" y="108">π<tspan dy="-7" font-size="11">±</tspan></text>
+                  <path d="M150 52h48" stroke="currentColor" stroke-width="1.5" marker-end="url(#ah)"/>
+                  <text x="206" y="40">B<tspan dy="5" font-size="11">s</tspan><tspan dy="-12" font-size="11">0</tspan></text>
+                  <text x="206" y="72" style="fill: var(--accent)">γ (not seen)</text>
+                </g>
+                <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="currentColor"/></marker></defs>
+              </svg>
+            </div>
+            <figcaption>The decay chain. The photon from the B<sub>s</sub><sup>∗0</sup> is too soft to reconstruct, so it is inferred from what remains.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TORCH -->
+    <section class="section" id="torch" aria-labelledby="torch-title">
+      <div class="wrap theme">
+        <div>
+          <span class="eyebrow">04 · Detector R&amp;D</span>
+          <h2 id="torch-title">TORCH: timing particles to picoseconds</h2>
+          <p class="in-short">To study a collision you need to know which particles came out of it. TORCH is a detector that identifies particles by timing their flight with a precision of tens of picoseconds, using Cherenkov light trapped inside a quartz plate. It is being developed for a future upgrade of LHCb.</p>
+
+          <span class="label">My role</span>
+          <ul class="role-list">
+            <li>Leading the <strong>20-person analysis team</strong> for the TORCH test beams in 2022 and 2025: planning, analysis development and code review.</li>
+            <li>Hands-on at the <strong>July 2025 test beam</strong> at CERN: set up the timing stations, installed electronics and light-tight panels, and took and monitored data.</li>
+            <li><strong>Rebuilt the test-beam analysis</strong> in modern Python with columnar analysis, hosted on GitLab with CI/CD.</li>
+            <li>Development of reconstruction and simulation software for the test-beam analysis.</li>
+            <li>Co-author of the full-scale module paper in <em>Nucl. Instrum. Meth. A</em> (2026).</li>
+          </ul>
+          <ul class="links" aria-label="TORCH resources">
+            <li><a href="https://doi.org/10.1016/j.nima.2026.171542">Full-scale TORCH module (NIM A) <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+            <li><a href="https://doi.org/10.1088/1748-0221/21/07/C07011">MCP-PMT characterisation (JINST) <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-external"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Software -->
+    <section class="section" id="software" aria-labelledby="software-title">
+      <div class="wrap theme">
+        <div>
+          <span class="eyebrow">05 · Research software</span>
+          <h2 id="software-title">Software &amp; reproducibility</h2>
+          <p class="in-short">Modern particle physics is a software discipline. Analyses run for years, involve many people and must be reproducible long after publication. I build tools and standards that make that the default.</p>
+
+          <span class="label">My role</span>
+          <ul class="role-list">
+            <li>Developed and maintain the <a href="https://gitlab.cern.ch/lhcb-dpa/wp6-analysis-preservation-and-open-data/analysis-repo-skeleton"><strong>LHCb Analysis Repository Template</strong></a>, setting collaboration-wide standards for reproducible analyses, CI/CD and long-term preservation. It is now the default skeleton for LHCb analyses and part of the official training for new members.</li>
+            <li>Contributed to LHCb’s <strong>real-time data-processing and trigger software</strong>, the system that selects and reconstructs collisions as they happen, through reviewed merges and performance improvements.</li>
+            <li>Physics-to-computing <strong>liaison</strong> for the QCD, Electroweak &amp; Exotica working group (2025–26): trigger validation and cross-repository software reviews.</li>
+            <li>Organiser and teacher at <strong>LHCb Starterkit</strong> since 2021, teaching Python and Git/GitLab to more than a hundred PhD students and postdocs.</li>
+          </ul>
+          <ul class="links" aria-label="Software resources">
+            <li><a href="https://github.com/AhmedAbdelmotteleb">GitHub <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-github"/></svg></a></li>
+            <li><a href="https://gitlab.cern.ch/ahabdelm">CERN GitLab <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-gitlab"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="theme-aside">
+          <div class="toolkit">
+            <h3>Daily toolkit</h3>
+            <ul class="tags">
+              <li>Python</li><li>C++</li><li>ROOT</li><li>Snakemake</li><li>GitLab CI/CD</li><li>HTCondor</li><li>Slurm</li><li>CERN LCG Grid</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <h2>Get in touch</h2>
+          <p class="muted">Happy to talk about collaborations, invited talks, teaching, or bringing physics-grade statistics and machine learning to new problems.</p>
+          <a class="email" href="mailto:ahmed.abdelmotteleb@cern.ch">ahmed.abdelmotteleb@cern.ch</a>
+        </div>
+        <ul class="social" aria-label="Profiles and social media">
+          <li><a href="https://inspirehep.net/authors/1888576" aria-label="INSPIRE-HEP"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-inspire"/></svg></a></li>
+          <li><a href="https://orcid.org/0000-0001-7905-0542" aria-label="ORCID"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-orcid"/></svg></a></li>
+          <li><a href="https://scholar.google.com/citations?user=KqfRufsAAAAJ&amp;hl=en" aria-label="Google Scholar"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-scholar"/></svg></a></li>
+          <li><a href="https://github.com/AhmedAbdelmotteleb" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-github"/></svg></a></li>
+          <li><a href="https://gitlab.cern.ch/ahabdelm" aria-label="CERN GitLab"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-gitlab"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/ahmed-abdel/" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-linkedin"/></svg></a></li>
+          <li><a href="https://www.instagram.com/ahmedsamehwagih/" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-instagram"/></svg></a></li>
+          <li><a href="https://www.facebook.com/ahmed.s.wagih/" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#i-facebook"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="fine">
+        <p>© 2026 Ahmed Abdelmotteleb · Updated October 2026</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
